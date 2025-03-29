@@ -1,0 +1,186 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh; /* Ensure full viewport height */
+  background-color: white;
+  color: black;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Dark mode button */
+.dark-mode button {
+  background-color: #333;
+  color: #ffffff;
+}
+
+/* Make sure text inside h1 and strong also turns white */
+.dark-mode h1,
+.dark-mode h1 strong {
+  color: white;
+}
+
+/* Toggle switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgba(0, 0, 0, 0.312);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Nutrition Table Styling */
+.custom-table {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dddddd;
+  max-width: 400px;
+}
+
+.custom-table h2 {
+  color: #333333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.custom-table .nutrient-item {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.custom-table .nutrient-item:last-child {
+  border-bottom: none;
+}
+
+.custom-table .float-end {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.exercise-container {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center; /* Center heading */
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center cards horizontally */
+  gap: 20px;
+}
+
+.exercise-card {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make all cards equal width */
+  max-width: 400px; /* Adjust width */
+  justify-content: center; /* Center items inside the card */
+}
+
+.exercise-card img {
+  margin-right: 15px;
+}
+
+.exercise-card h5 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.exercise-card p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+.search-input {
+  width: 60%;   /* Adjust width as needed */
+  max-width: 500px;  /* Prevent it from becoming too wide */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-button{
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.search-button:hover {
+  background-color: #0056b3;
+}
